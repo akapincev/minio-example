@@ -1,0 +1,22 @@
+<div class="container mx-auto px-4">
+  <div *ngIf="books.length; else noBooksTemplate" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div *ngFor="let book of books" class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+      <img class="w-full" *ngIf="book.imageUrl" [src]="book.imageUrl" alt="{{ book.title }}">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">{{ book.title }}</div>
+        <p class="text-gray-700 text-base">
+          {{ book.description }}
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ book.author }}</span>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noBooksTemplate>
+    <p class="text-center text-gray-500 text-xs">
+      No books available.
+    </p>
+  </ng-template>
+</div>

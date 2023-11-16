@@ -1,0 +1,22 @@
+<!-- Navigation -->
+<nav class="bg-gray-800 p-4">
+  <div class="container mx-auto flex items-center justify-between">
+    <a class="text-white text-3xl font-bold" href="/">Book Manager</a>
+    <div>
+      <a class="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/books">Books</a>
+      <a class="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/add-book">Add Book</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="container mx-auto p-4">
+  <router-outlet></router-outlet>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 p-4 mt-8">
+  <div class="container mx-auto text-center text-white">
+    &copy; {{ currentYear }} Book Manager. All rights reserved.
+  </div>
+</footer>
